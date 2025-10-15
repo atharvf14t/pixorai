@@ -483,7 +483,7 @@ app.get("/model/status/:modelId", authMiddleware, async (req, res) => {
   }
 });
 
-app.use("/payment", paymentRoutes);
+// app.use("/payment", paymentRoutes);
 app.use("/api/webhook", webhookRouter);
 
 app.listen(PORT, () => {

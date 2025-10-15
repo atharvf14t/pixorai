@@ -5,9 +5,9 @@ import crypto from "crypto";
 import { PlanType } from "@prisma/client";
 
 // Validate environment variables
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
-const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
-const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET;
+const STRIPE_SECRET_KEY="hi";
+const RAZORPAY_KEY_ID = "hi";
+const RAZORPAY_KEY_SECRET = "hi";
 
 if (!STRIPE_SECRET_KEY) {
   console.error("Missing STRIPE_SECRET_KEY");
