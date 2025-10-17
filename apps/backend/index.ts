@@ -27,7 +27,7 @@ const falAiModel = new FalAIModel();
 const app = express();
 app.use(
   cors({
-    origin: ["https://photo.100xdevs.com", "http://localhost:3000"],
+    origin: ["https://pixorai.picaistudio.com", "http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],

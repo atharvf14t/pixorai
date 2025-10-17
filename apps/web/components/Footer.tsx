@@ -83,10 +83,10 @@ export function Footer() {
               <p className="font-medium">Company</p>
               <nav className="flex flex-col space-y-2">
                 <Link
-                  href="/"
+                  href="/aboutus"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
-                  About
+                  About us
                 </Link>
                 <Link
                   href="/"
@@ -113,25 +113,25 @@ export function Footer() {
               <p className="font-medium">Help</p>
               <nav className="flex flex-col space-y-2">
                 <Link
-                  href="/"
+                  href="/refundPolicy"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
-                  FAQ
+                 	Refund
                 </Link>
                 <Link
-                  href="/"
+                  href="/contact"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
                   Contact
                 </Link>
                 <Link
-                  href="/"
+                  href="/privacy"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
-                  Privacy
+                  Shipping and Privacy policy
                 </Link>
                 <Link
-                  href="/"
+                  href="/termsOfService"
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
                   Terms
@@ -150,7 +150,7 @@ export function Footer() {
             <div className="flex gap-4">
               <Button variant="ghost" size="sm" asChild>
                 <Link
-                  href="/"
+                  href="/privacy"
                   className="text-xs text-muted-foreground hover:text-foreground"
                 >
                   Privacy Policy
@@ -158,7 +158,7 @@ export function Footer() {
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <Link
-                  href="/"
+                  href="/termsOfService"
                   className="text-xs text-muted-foreground hover:text-foreground"
                 >
                   Terms of Service

@@ -109,11 +109,11 @@ export function Train() {
   }, [modelId, getToken, router]);
 
   async function trainModal() {
-    if (credits <= 0) {
-      toast.error("You don't have enough credits");
-      router.push("/pricing");
-      return;
-    }
+//    if (credits <= 0) {
+  //    toast.error("You don't have enough credits");
+    //  router.push("/pricing");
+ //     return;
+   // }
 
     if (!zipUrl) {
       toast.error("Please upload images first");
