@@ -35,7 +35,7 @@ export async function authMiddleware(
 
     if (!publicKey) {
       console.error("Missing CLERK_JWT_PUBLIC_KEY in environment variables");
-      res.status(500).json({ message: "Server configuration error" });
+      res.status(500).json({ message: "Server configuration error clerk jwt public key" });
       return;
     }
 
@@ -45,7 +45,7 @@ export async function authMiddleware(
     const decoded = jwt.verify(token, formattedKey, {
       algorithms: ["RS256"],
       issuer:
-        process.env.CLERK_ISSUER || "https://clerk.100xdevs.com",
+        process.env.CLERK_ISSUER || "https://clerk.picaistudio.com",
       complete: true,
     });
 

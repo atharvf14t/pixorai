@@ -16,7 +16,7 @@ import paymentRoutes from "./routes/payment.routes";
 import { router as webhookRouter } from "./routes/webhook.routes";
 
 const IMAGE_GEN_CREDITS = 1;
-const TRAIN_MODEL_CREDITS = 20;
+const TRAIN_MODEL_CREDITS = 40;
 
 dotenv.config();
 
@@ -68,7 +68,8 @@ app.post("/ai/training", authMiddleware, async (req, res) => {
       parsedBody.data.zipUrl,
       parsedBody.data.name
     );
-
+	console.log("zipurl: ", parsedBody.data.zipUrl);
+	console.log(`this is the zip url---------: ${parsedBody.data.zipUrl}`);
     const data = await prismaClient.model.create({
       data: {
         name: parsedBody.data.name,
@@ -87,6 +88,7 @@ app.post("/ai/training", authMiddleware, async (req, res) => {
       modelId: data.id,
     });
   } catch (error) {
+	 
     console.error("Error in /ai/training:", error);
     res.status(500).json({
       message: "Training failed",
@@ -482,6 +484,41 @@ app.get("/model/status/:modelId", authMiddleware, async (req, res) => {
     return;
   }
 });
+app.get(
+  "/payment/credits",
+  authMiddleware,
+  async (req: express.Request, res: express.Response) => {
+    try {
+      if (!req.userId) {
+        res.status(401).json({ message: "Unauthorized" });
+        return;
+      }
+
+      const userCredit = await prismaClient.userCredit.findUnique({
+        where: {
+          userId: req.userId,
+        },
+        select: {
+          amount: true,
+          updatedAt: true,
+        },
+      });
+
+      res.json({
+        credits: userCredit?.amount || 0,
+        lastUpdated: userCredit?.updatedAt || null,
+      });
+      return;
+    } catch (error) {
+      console.error("Error fetching credits:", error);
+      res.status(500).json({
+        message: "Error fetching credits",
+        details: error instanceof Error ? error.message : "Unknown error",
+      });
+      return;
+    }
+  }
+);
 
 // app.use("/payment", paymentRoutes);
 app.use("/api/webhook", webhookRouter);
