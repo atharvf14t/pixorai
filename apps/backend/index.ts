@@ -282,7 +282,7 @@ app.post("/fal-ai/webhook/train", async (req, res) => {
   console.log("====================Received training webhook====================");
   console.log("Received training webhook:", req.body);
   const requestId = req.body.request_id as string;
-
+	console.log("requestID is ------------------------ ", requestId);
   // First find the model to get the userId
   const model = await prismaClient.model.findFirst({
     where: {
@@ -297,7 +297,7 @@ app.post("/fal-ai/webhook/train", async (req, res) => {
     res.status(404).json({ message: "Model not found" });
     return;
   }
-
+	console.log("req.body.status: ", req.body.status);
   // Handle error case
   if (req.body.status === "ERROR") {
     console.error("Training error:", req.body.error);
