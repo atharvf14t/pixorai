@@ -520,7 +520,7 @@ app.get(
   }
 );
 
-// app.use("/payment", paymentRoutes);
+app.use("/payment", paymentRoutes);
 app.use("/api/webhook", webhookRouter);
 
 app.listen(PORT, () => {
