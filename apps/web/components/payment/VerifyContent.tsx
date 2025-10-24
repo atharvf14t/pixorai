@@ -56,7 +56,7 @@ export function VerifyContent() {
             razorpay_payment_id: paymentId,
             razorpay_order_id: orderId,
             razorpay_signature: signature,
-            plan: plan || "basic", // Include plan
+            plan: plan || "pro", // Include plan
             amount: amount || "0", // Include amount
             paymentMethod: "razorpay",
             status: "success",

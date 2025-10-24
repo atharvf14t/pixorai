@@ -1,5 +1,6 @@
 export enum PlanType {
-  basic = "basic",
+	starter = "starter",
+  pro = "pro",
   premium = "premium",
 }
 

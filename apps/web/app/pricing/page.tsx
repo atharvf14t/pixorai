@@ -21,13 +21,26 @@ export default function SubscriptionPage() {
   };
 
   const plans = [
-    {
-      type: PlanType.basic,
-      name: "Basic Plan",
-      price: 50,
-      credits: 500,
+	  {
+      type: PlanType.starter,
+      name: "Starter Plan",
+      price: 19,
+      credits: 50,
       features: [
-        "500 Credits",
+        "50 Credits",
+        "Basic Support",
+        "Standard Processing",
+        "Flux Lora",
+        "24/7 Email Support",
+      ],
+    },
+    {
+      type: PlanType.pro,
+      name: "Pro Plan",
+      price: 49,
+      credits: 1000,
+      features: [
+        "1000 Credits",
         "Basic Support",
         "Standard Processing",
         "Flux Lora",
@@ -37,10 +50,10 @@ export default function SubscriptionPage() {
     {
       type: PlanType.premium,
       name: "Premium Plan",
-      price: 100,
-      credits: 1000,
+      price: 99,
+      credits: 3000,
       features: [
-        "1000 Credits",
+        "3000 Credits",
         "Priority Support",
         "Fast Processing",
         "Advanced Features",
@@ -68,7 +81,7 @@ export default function SubscriptionPage() {
       </motion.div>
 
       <motion.div
-        className="grid md:grid-cols-2 gap-8 mt-10"
+        className="grid md:grid-cols-3 gap-8 mt-10"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, delay: 0.2 }}

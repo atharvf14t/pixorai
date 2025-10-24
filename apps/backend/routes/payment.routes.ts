@@ -24,7 +24,7 @@ router.post("/create", authMiddleware, async (req: express.Request, res: express
       return res.status(400).json({ message: "User information missing" });
     }
 
-    if (!plan || !["basic", "premium"].includes(plan)) {
+    if (!plan || !["starter", "pro", "premium"].includes(plan)) {
       return res.status(400).json({ message: "Invalid plan" });
     }
 

@@ -13,16 +13,18 @@ const dodo = new DodoPayments({
  * Define plan prices (for DB records)
  */
 export const PLAN_PRICES = {
-  basic: 50,
-  premium: 100,
+  starter: 19,
+  pro: 49,
+  premium: 99,
 } as const;
 
 /**
  * Define credit amounts per plan
  */
 export const CREDITS_PER_PLAN = {
-  basic: 500,
-  premium: 1000,
+  starter: 50,
+  pro: 1000,
+  premium: 3000,
 } as const;
 
 /**
@@ -38,6 +40,7 @@ export async function createTransactionRecord(
   status: "PENDING" | "SUCCESS" | "FAILED" = "PENDING"
 ) {
   try {
+	  console.log('this is the plan ', plan);
     return await prismaClient.transaction.create({
       data: {
         userId,
@@ -58,9 +61,15 @@ export async function createTransactionRecord(
 /**
  * Create a Dodo Payments checkout session
  */
+const productMap = {
+  starter: "pdt_sJEYn4JkI01dlNy199xHu",
+  pro: "pdt_tCzf3sO6UUs9tUfDu2leh",
+  premium: "pdt_eSyFxtDXLPad8KOlgPSum",
+};
+
 export async function createDodoPaymentSession(
   userId: string,
-  plan: "basic" | "premium",
+  plan: "starter" | "pro" | "premium",
   name: string,
   email: string
 ) {
@@ -70,7 +79,7 @@ export async function createDodoPaymentSession(
 
     // Create checkout session via Dodo SDK
     const checkout = await dodo.checkoutSessions.create({
-  product_cart: [{ product_id: 'pdt_sJEYn4JkI01dlNy199xHu', quantity: 1 }],
+  product_cart: [{ product_id: productMap[plan], quantity: 1 }],
   customer: {name, email},
   return_url: 'https://pixorai.picaistudio.com/',
   metadata: {userId, plan}
