@@ -81,7 +81,7 @@ export const carouselImages = [
     style: "Casual",
   },
   {
-    url: "https://github.com/atharvf14t/til/blob/master/Screenshot%20(15).png?raw=true",
+    url: "/pic_one.png",
     title: "Casual Lifestyle",
     description: "Natural and relaxed everyday portraits",
     style: "Casual",
