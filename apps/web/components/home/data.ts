@@ -74,6 +74,37 @@ export const carouselImages = [
     description: "High-end fashion inspired photography",
     style: "Fashion",
   },
+  {
+    url: "https://r2-us-west.photoai.com/1739273789-920e7410ef180855f9a5718d1e37eb3a-1.png",
+    title: "Casual Lifestyle",
+    description: "Natural and relaxed everyday portraits",
+    style: "Casual",
+  },
+  {
+    url: "https://github.com/atharvf14t/til/blob/master/Screenshot%20(15).png?raw=true",
+    title: "Casual Lifestyle",
+    description: "Natural and relaxed everyday portraits",
+    style: "Casual",
+  },
+  {
+    url: "https://r2-us-west.photoai.com/1739273789-920e7410ef180855f9a5718d1e37eb3a-1.png",
+    title: "Casual Lifestyle",
+    description: "Natural and relaxed everyday portraits",
+    style: "Casual",
+  },
+  {
+    url: "https://r2-us-west.photoai.com/1739273789-920e7410ef180855f9a5718d1e37eb3a-1.png",
+    title: "Casual Lifestyle",
+    description: "Natural and relaxed everyday portraits",
+    style: "Casual",
+  },
+  {
+    url: "https://drive.google.com/file/d/1tBycPVv4XAMJt5xjMP6M1ZJH9_BO_DD6/view?usp=sharing",
+    title: "Casual Lifestyle",
+    description: "Natural and relaxed everyday portraits",
+    style: "Casual",
+  },
+
 ];
 
 export const brands = [
@@ -96,7 +127,7 @@ export const stats = [
 export const plans = [
   {
     name: "Starter",
-    price: "Free",
+    price: "$19",
     features: [
       "10 AI Portraits",
       "Basic Styles",
@@ -107,9 +138,9 @@ export const plans = [
   },
   {
     name: "Pro",
-    price: "$9.99",
+    price: "$49",
     features: [
-      "100 AI Portraits",
+      "1000 AI Portraits",
       "Premium Styles",
       "Priority Support",
       "HD Export",
@@ -118,8 +149,8 @@ export const plans = [
     highlighted: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Premium",
+    price: "$99",
     features: [
       "Unlimited Portraits",
       "Custom Styles",

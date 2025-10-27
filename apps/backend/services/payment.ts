@@ -6,14 +6,14 @@ import DodoPayments from "dodopayments"; // replace with actual SDK import
 console.log("this is the dodo payment api, ", process.env.DODO_PAYMENTS_API_KEY);
 const dodo = new DodoPayments({
   bearerToken: process.env.DODO_PAYMENTS_API_KEY!,
-  environment: "test_mode"
+  environment: "live_mode"
 });
 
 /**
  * Define plan prices (for DB records)
  */
 export const PLAN_PRICES = {
-  starter: 19,
+  starter: 10,
   pro: 49,
   premium: 99,
 } as const;
@@ -62,9 +62,9 @@ export async function createTransactionRecord(
  * Create a Dodo Payments checkout session
  */
 const productMap = {
-  starter: "pdt_sJEYn4JkI01dlNy199xHu",
-  pro: "pdt_tCzf3sO6UUs9tUfDu2leh",
-  premium: "pdt_eSyFxtDXLPad8KOlgPSum",
+  starter: "pdt_rBAojVpeGixuGjdgMU95A",
+  pro: "pdt_k80t0QSdI1hkVbh2oHT9B",
+  premium: "pdt_5S1TQPDvV2E6Y1vwEtuOJ",
 };
 
 export async function createDodoPaymentSession(
