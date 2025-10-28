@@ -15,12 +15,12 @@ const steps = [
     icon: <Wand2 className="w-6 h-6" />,
     title: "AI Magic",
     description:
-      "Our advanced AI transforms your photo into stunning portraits",
+      "Our advanced AI learns your facial attributes to generate ultra realistic photos",
   },
   {
     icon: <Download className="w-6 h-6" />,
     title: "Download & Share",
-    description: "Get your enhanced portraits in multiple styles instantly",
+    description: "Get your enhanced photos in multiple styles instantly",
   },
 ];
 
@@ -44,7 +44,7 @@ export function HowItWorks() {
           </span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Transform your photos into stunning AI-powered portraits in three
+          Transform your dream photoshoot into reality in three
           simple steps
         </p>
       </div>

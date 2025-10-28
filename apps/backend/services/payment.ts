@@ -22,9 +22,9 @@ export const PLAN_PRICES = {
  * Define credit amounts per plan
  */
 export const CREDITS_PER_PLAN = {
-  starter: 50,
+  starter: 150,
   pro: 1000,
-  premium: 3000,
+  premium: 2500,
 } as const;
 
 /**

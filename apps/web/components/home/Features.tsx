@@ -12,14 +12,14 @@ const features = [
   },
   {
     icon: <Wand2 className="w-6 h-6" />,
-    title: "Magic Editing",
-    description: "Advanced AI tools to perfect every detail",
+    title: "Best AI Models",
+    description: "PixorAI uses the latest Flux AI models to learn your face and create stunningly realistic images",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "Family Collections",
-    description: "Create stunning portraits for the whole family",
+    title: "Pack Collections",
+    description: "Get the whole photoshoot done based on a theme",
     gradient: "from-pink-500 to-red-500",
   },
   {

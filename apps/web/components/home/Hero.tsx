@@ -66,7 +66,7 @@ export function Hero() {
                 </h2>
                 <p className="text-muted-foreground text-xl">
                   Join thousands of creators who have already transformed their
-                  photos with our AI technology.
+                  photos with PixorAI.
                 </p>
 
                 <SignedOut>
@@ -98,24 +98,6 @@ export function Hero() {
                   </div>
                 </SignedOut>
 
-                <div className="pt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8">
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="flex items-center text-purple-600 dark:text-purple-300">
-                      <CheckCircle className="w-4 h-4 mr-1" />
-                      No credit card required
-                    </span>
-                    <span className="hidden sm:inline text-gray-500">•</span>
-                    <span className="flex items-center text-pink-600 dark:text-pink-300">
-                      <Sparkles className="w-4 h-4 mr-1" />
-                      Free credits to start
-                    </span>
-                    <span className="hidden sm:inline text-gray-500">•</span>
-                    <span className="flex items-center text-red-600 dark:text-red-300">
-                      <Clock className="w-4 h-4 mr-1" />
-                      Cancel anytime
-                    </span>
-                  </div>
-                </div>
               </div>
             </motion.section>
           </motion.div>

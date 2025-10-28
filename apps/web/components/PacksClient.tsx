@@ -43,7 +43,7 @@ export function PacksClient({ packs }: { packs: TPack[] }) {
             Select Pack
           </h2>
           <p className="text-sm text-muted-foreground">
-            Chose a pack to generate images with
+            Choose from a wide variety of themes to generate multiple images!
           </p>
         </div>
         <motion.div 
