@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "PixorAI - AI-Powered Photo Enhancement",
   description:
     "Transform your photos with AI-powered enhancement and editing tools.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
-        <Script
+      <link rel="icon" type="image/png" href="/favicon.png" />  
+      <Script
           id="razorpay-checkout"
           src="https://checkout.razorpay.com/v1/checkout.js"
           strategy="beforeInteractive"
